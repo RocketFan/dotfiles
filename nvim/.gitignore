@@ -1,0 +1,5 @@
+# Ignore runtime directories
+autoload/
+plugged/
+gutentags/
+undotree/

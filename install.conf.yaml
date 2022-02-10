@@ -1,3 +1,6 @@
-- clean: []
-- link: {}
+- clean: ['~', '~/.config']
+
+- link: 
+        ~/.config/nvim:
+
 - shell: []
