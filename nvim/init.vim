@@ -11,6 +11,21 @@ endif
 " plugins "
 """""""""""
 call plug#begin()
-" general
+" Git wrapper
 Plug 'tpope/vim-fugitive'
+
+" File manager
+Plug 'scrooloose/nerdtree'
+
+" Syntax checking
+Plug 'vim-syntastic/syntastic'
+
+" Tabbar light as air
+Plug 'bling/vim-airline'
+
+" Syntax highlighter
+Plug 'sheerun/vim-polyglot'
+
+" Code completion
+Plug 'valloric/youcompleteme'
 call plug#end()
