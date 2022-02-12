@@ -25,7 +25,8 @@ Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 " Syntax highlighter
-Plug 'sheerun/vim-polyglot'
+" Plug 'sheerun/vim-polyglot'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 " Code completion
 Plug 'valloric/youcompleteme'
