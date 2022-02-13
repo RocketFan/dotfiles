@@ -187,4 +187,4 @@ bar {
 }
 
 # Restore last session wallpaper with nitrogen
-exec nitrogen --no-startup-id --restore
+exec --no-startup-id nitrogen --restore

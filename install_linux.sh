@@ -1,7 +1,15 @@
 #!/bin/bash
 
+##########
+# DotBot #
+##########
+
 # Link dotfiles
 ./install
+
+#############
+# Setup vim #
+#############
 
 # Install NVIM
 sudo snap install nvim -y
@@ -14,12 +22,18 @@ nvim +PlugInstall +qall
 sudo apt install build-essential cmake python3-dev -y
 python3 ~/.local/share/nvim/plugged/youcompleteme/install.py --clangd-completer
 
-# Install i3
+############
+# Setup i3 #
+############
+
+# Install i3-gaps
 sudo add-apt-repository -y ppa:regolith-linux/stable
 sudo apt install i3-gaps -y
+
 # For control brightness on laptops
 sudo apt install light -y
 sudo chmod +s /usr/bin/light
+
 # Enable touchpad tap
 sudo mkdir -p /etc/X11/xorg.conf.d && sudo tee <<'EOF' /etc/X11/xorg.conf.d/90-touchpad.conf 1> /dev/null 
 Section "InputClass"
@@ -30,3 +44,6 @@ Section "InputClass"
 EndSection
 
 EOF
+
+# Install nitrogen for wallpapers
+sudo apt install nitrogen -y
