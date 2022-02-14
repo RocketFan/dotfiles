@@ -7,12 +7,39 @@
 # Link dotfiles
 ./install
 
+################
+# Dependencies #
+################
+
+# Install some packages
+sudo apt install git wget -y
+
+# Install compositior for opacity
+sudo apt install picom -y
+
+#########
+# Fonts #
+#########
+
+cd ~/Downloads
+
+# Powerline fonts
+git clone https://github.com/powerline/fonts.git --depth=1
+cd fonts && ./install.sh
+cd .. && rm -rf fonts
+
+#############
+# Alacritty #
+#############
+
+sudo snap install alacritty
+
 #############
 # Setup vim #
 #############
 
 # Install NVIM
-sudo snap install nvim -y
+sudo snap install nvim
 echo 'alias vim="nvim"' >> ~/.bashrc
 
 # Install vim plugins

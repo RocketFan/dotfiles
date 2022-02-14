@@ -3,6 +3,7 @@
 - link: 
         ~/.config/nvim:
         ~/.config/i3:
+        ~/.config/alacritty:
         ~/.images:
 
 - shell: []

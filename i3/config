@@ -45,7 +45,7 @@ bindsym XF86MonBrightnessDown exec light -U 5 # decrease screen brightness
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -188,3 +188,4 @@ bar {
 
 # Restore last session wallpaper with nitrogen
 exec --no-startup-id nitrogen --restore
+exec --no-startup-id picom
