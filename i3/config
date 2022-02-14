@@ -188,4 +188,9 @@ bar {
 
 # Restore last session wallpaper with nitrogen
 exec --no-startup-id nitrogen --restore
+
+# Enable opacity background for windows
 exec --no-startup-id picom
+
+# Map capslock to escape
+exec setxkbmap -option caps:escape
