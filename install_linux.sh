@@ -17,16 +17,18 @@ sudo apt install git wget -y
 # Install compositior for opacity
 sudo apt install picom -y
 
-#########
-# Fonts #
-#########
+##############
+# Nerd Fonts #
+##############
 
-cd ~/Downloads
+mkdir -p ~/.local/share/fonts
+cd ~/.local/share/fonts
+FONT_URL=https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/Hack
 
-# Powerline fonts
-git clone https://github.com/powerline/fonts.git --depth=1
-cd fonts && ./install.sh
-cd .. && rm -rf fonts
+# Hack fonts
+wget -O "Hack Regular Nerd Font Complete.ttf" "$FONT_URL/Regular/complete/Hack Regular Nerd Font Complete.ttf?raw=true"
+wget -O "Hack Bold Nerd Font Complete.ttf" "$FONT_URL/Bold/complete/Hack Bold Nerd Font Complete.ttf?raw=true"
+wget -O "Hack Italic Nerd Font Complete.ttf" "$FONT_URL/Italic/complete/Hack Italic Nerd Font Complete.ttf?raw=true"
 
 #############
 # Alacritty #

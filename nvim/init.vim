@@ -11,25 +11,14 @@ endif
 " plugins "
 """""""""""
 call plug#begin()
-" Git wrapper
-Plug 'tpope/vim-fugitive'
-
-" File manager
-Plug 'scrooloose/nerdtree'
-
-" Syntax checking
-Plug 'vim-syntastic/syntastic'
-
-" Tabbar light as air
-Plug 'bling/vim-airline'
+Plug 'tpope/vim-fugitive' "Git wrapper
+Plug 'scrooloose/nerdtree' "File manager
+Plug 'vim-syntastic/syntastic' "Syntax checking
+Plug 'bling/vim-airline' "Tabbar light as air
 Plug 'vim-airline/vim-airline-themes'
-
-" Syntax highlighter
-" Plug 'sheerun/vim-polyglot'
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-
-" Code completion
-Plug 'valloric/youcompleteme'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} "Syntax highlighter
+Plug 'valloric/youcompleteme' "Code completion
+Plug 'tpope/vim-surround' "Is all about 'surroundings'
 call plug#end()
 
 """"""""""""""""""
