@@ -34,14 +34,14 @@ wget -O "Hack Italic Nerd Font Complete.ttf" "$FONT_URL/Italic/complete/Hack Ita
 # Alacritty #
 #############
 
-sudo snap install alacritty
+sudo snap install alacritty --classic
 
 #############
 # Setup vim #
 #############
 
 # Install NVIM
-sudo snap install nvim
+sudo snap install neovim
 echo 'alias vim="nvim"' >> ~/.bashrc
 
 # Install vim plugins
