@@ -5,7 +5,7 @@
 ##########
 
 # Link dotfiles
-./install
+./setup.sh
 
 ################
 # Dependencies #
@@ -41,7 +41,7 @@ sudo snap install alacritty --classic
 #############
 
 # Install NVIM
-sudo snap install neovim
+sudo snap install nvim --classic
 echo 'alias vim="nvim"' >> ~/.bashrc
 
 # Install vim plugins
