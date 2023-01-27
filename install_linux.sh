@@ -11,6 +11,9 @@
 # Dependencies #
 ################
 
+# Update
+sudo apt update
+
 # Install some packages
 sudo apt install git wget -y
 
