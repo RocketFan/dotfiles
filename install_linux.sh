@@ -15,7 +15,12 @@
 sudo apt update
 
 # Install some packages
-sudo apt install git wget -y
+sudo apt install git wget npm -y
+
+# Install lst Node
+sudo npm install -g n
+sudo n lst
+
 
 # Install compositior for opacity
 sudo apt install picom -y
@@ -50,6 +55,15 @@ echo 'alias vim="nvim"' >> ~/.bashrc
 # Install vim plugins
 nvim +PlugInstall +qall
 
+# Install LSP
+nvim "+LspInstall pyright rust_analyzer" +qall
+
+# Install Language Parser
+nvim "+TSInstall python rust" +qall
+
+# Install Debugger
+nvim "+DapInstall python rust" +qall
+
 # Install YCM for vim
 sudo apt install build-essential cmake python3-dev -y
 python3 ~/.local/share/nvim/plugged/youcompleteme/install.py --clangd-completer
@@ -77,5 +91,11 @@ EndSection
 
 EOF
 
-# Install nitrogen for wallpapers
-sudo apt install nitrogen -y
+#####################
+# Some usefull apps #
+#####################
+
+sudo apt install -y nitrogen arandr
+
+# nitrogen - wallpapers
+# arandr - manage multiple screens

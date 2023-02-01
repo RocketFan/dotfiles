@@ -160,10 +160,10 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym h resize shrink width $resize_size px or $resize_size ppt
+        bindsym h resize grow width $resize_size px or $resize_size ppt
         bindsym j resize grow height $resize_size px or $resize_size ppt
         bindsym k resize shrink height $resize_size px or $resize_size ppt
-        bindsym l resize grow width $resize_size px or $resize_size ppt
+        bindsym l resize shrink width $resize_size px or $resize_size ppt
 
         # back to normal: Enter or Escape or $mod+r
         bindsym Return mode "default"
