@@ -1,10 +1,12 @@
 - clean: ['~', '~/.config']
 
 - link: 
-        ~/.config/nvim/lua/user: astronvim
+        ~/.config/nvim:
+        # ~/.config/nvim/lua/user: astronvim
         ~/.config/i3:
         ~/.config/alacritty:
         ~/.config/fontconfig:
         ~/.images:
+        ~/.screenlayout:
 
 - shell: []
