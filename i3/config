@@ -194,3 +194,6 @@ exec --no-startup-id picom
 
 # Map capslock to escape
 exec setxkbmap -option caps:escape
+
+# Load screen layout
+exec ~/.screenlayout/default.sh
