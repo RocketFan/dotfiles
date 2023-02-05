@@ -25,6 +25,7 @@ sudo apt install picom -y
 #######
 
 ./nvim/install_linux.sh
+echo 'alias vim="nvim"' >> ~/.bashrc
 
 ##############
 # Nerd Fonts #
