@@ -150,6 +150,16 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
+## Screenshots
+bindsym Print exec --no-startup-id maim "/home/$USER/Pictures/$(date)"
+bindsym $mod+Print exec --no-startup-id maim --window $(xdotool getactivewindow) "/home/$USER/Pictures/$(date)"
+bindsym Shift+Print exec --no-startup-id maim --select "/home/$USER/Pictures/$(date)"
+
+## Clipboard Screenshots
+bindsym Ctrl+Print exec --no-startup-id maim | xclip -selection clipboard -t image/png
+bindsym Ctrl+$mod+Print exec --no-startup-id maim --window $(xdotool getactivewindow) | xclip -selection clipboard -t image/png
+bindsym Ctrl+Shift+Print exec --no-startup-id maim --select | xclip -selection clipboard -t image/png
+
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
@@ -189,11 +199,15 @@ bar {
 # Restore last session wallpaper with nitrogen
 exec --no-startup-id nitrogen --restore
 
-# Enable opacity background for windows
-exec --no-startup-id picom
+# # Enable opacity background for windows
+# exec --no-startup-id picom
 
-# Map capslock to escape
+# Start compton
+exec --no-startup-id compton
+
+# Setup keyboard 
 exec setxkbmap -option caps:escape
+exec setxkbmap -layout pl
 
 # Load screen layout
 exec ~/.screenlayout/default.sh
