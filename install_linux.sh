@@ -15,10 +15,10 @@
 sudo apt update
 
 # Install some packages
-sudo apt install git wget -y
+sudo apt install git wget maim -y
 
-# Install compositior for opacity
-sudo apt install picom -y
+# # Install compositior for opacity
+# sudo apt install picom -y
 
 #######
 # VIM #
@@ -68,7 +68,7 @@ EOF
 # Some usefull apps #
 #####################
 
-sudo apt install -y nitrogen arandr
+sudo apt install -y nitrogen arandr compton
 
 # nitrogen - wallpapers
 # arandr - manage multiple screens
@@ -77,4 +77,13 @@ sudo apt install -y nitrogen arandr
 # Alacritty #
 #############
 
-sudo snap install alacritty --classic
+sudo add-apt-repository ppa:aslatter/ppa -y
+sudo apt install alacritty
+
+# Set polish keyboard layout
+setxkbmap -layout pl
+
+# Set env variables
+echo 'export GST_PLUGIN_SCANNER=/usr/lib/x86_64-linux-gnu/gstreamer1.0/gstreamer-1.0/gst-plugin-scanner' >> ~/.bashrc
+echo 'export GST_PLUGIN_PATH=/usr/lib/x86_64-linux-gnu/gstreamer-1.0' >> ~/.bashrc
+echo 'export GST_PLUGIN_SYSTEM_PATH=/usr/lib/x86_64-linux-gnu/gstreamer-1.0' >> ~/.bashrc
