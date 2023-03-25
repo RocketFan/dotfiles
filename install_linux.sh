@@ -18,7 +18,7 @@ sudo apt update
 sudo apt install git wget maim -y
 
 # # Install compositior for opacity
-# sudo apt install picom -y
+sudo apt install picom -y
 
 #######
 # VIM #
@@ -68,7 +68,7 @@ EOF
 # Some usefull apps #
 #####################
 
-sudo apt install -y nitrogen arandr compton
+sudo apt install -y nitrogen arandr
 
 # nitrogen - wallpapers
 # arandr - manage multiple screens
@@ -82,6 +82,16 @@ sudo apt install alacritty
 
 # Set polish keyboard layout
 setxkbmap -layout pl
+
+##############
+# Mini Conda #
+##############
+
+cd /tmp
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+chmod +x Miniconda3-latest-Linux-x86_64.sh
+./Miniconda3-latest-Linux-x86_64.sh
+conda config --set auto_activate_base false
 
 # Set env variables
 echo 'export GST_PLUGIN_SCANNER=/usr/lib/x86_64-linux-gnu/gstreamer1.0/gstreamer-1.0/gst-plugin-scanner' >> ~/.bashrc
