@@ -2,11 +2,11 @@
 
 - link: 
         ~/.config/nvim:
+        ~/.config/vim:
         # ~/.config/nvim/lua/user: astronvim
         ~/.config/i3:
         ~/.config/alacritty:
         ~/.config/fontconfig:
         ~/.images:
-        ~/.screenlayout:
 
 - shell: []
