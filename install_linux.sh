@@ -23,9 +23,8 @@ sudo apt install picom -y
 #######
 # VIM #
 #######
-
+cd /tmp
 ./nvim/install_linux.sh
-echo 'alias vim="nvim"' >> ~/.bashrc
 
 ##############
 # Nerd Fonts #
@@ -36,10 +35,11 @@ cd ~/.local/share/fonts
 FONT_URL=https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/Hack
 
 # Hack fonts
-wget -O "Hack Regular Nerd Font Complete.ttf" "$FONT_URL/Regular/complete/Hack Regular Nerd Font Complete.ttf?raw=true"
-wget -O "Hack Bold Nerd Font Complete.ttf" "$FONT_URL/Bold/complete/Hack Bold Nerd Font Complete.ttf?raw=true"
-wget -O "Hack Italic Nerd Font Complete.ttf" "$FONT_URL/Italic/complete/Hack Italic Nerd Font Complete.ttf?raw=true"
+wget -O "HackNerdFont-Regular.ttf" "$FONT_URL/Regular/HackNerdFont-Regular.ttf?raw=true"
+wget -O "HackNerdFont-Bold.ttf" "$FONT_URL/Bold/HackNerdFont-Bold.ttf?raw=true"
+wget -O "HackNerdFont-Italic.ttf" "$FONT_URL/Italic/HackNerdFont-Italic.ttf?raw=true"
 
+fc-cache -f -v
 
 ############
 # Setup i3 #
@@ -68,10 +68,13 @@ EOF
 # Some usefull apps #
 #####################
 
-sudo apt install -y nitrogen arandr
+sudo apt install -y nitrogen \
+        arandr \
+        pavucontrol
 
 # nitrogen - wallpapers
 # arandr - manage multiple screens
+# pavucontrol - sound control
 
 #############
 # Alacritty #
@@ -92,16 +95,3 @@ wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 chmod +x Miniconda3-latest-Linux-x86_64.sh
 ./Miniconda3-latest-Linux-x86_64.sh
 conda config --set auto_activate_base false
-
-# Set env variables
-echo 'export GST_PLUGIN_SCANNER=/usr/lib/x86_64-linux-gnu/gstreamer1.0/gstreamer-1.0/gst-plugin-scanner' >> ~/.bashrc
-echo 'export GST_PLUGIN_PATH=/usr/lib/x86_64-linux-gnu/gstreamer-1.0' >> ~/.bashrc
-echo 'export GST_PLUGIN_SYSTEM_PATH=/usr/lib/x86_64-linux-gnu/gstreamer-1.0' >> ~/.bashrc
-echo 'alias ssh='TERM=xterm-256color ssh'' >> ~/.bashrc
-
-###########
-# Usefull #
-###########
-
-# Sound control GUI
-sudo apt install pavucontrol
