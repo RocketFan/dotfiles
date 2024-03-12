@@ -1,5 +1,9 @@
 live_config_reload = true
 
+[shell]
+program = "/bin/zsh"
+args = ["-l"]
+
 [colors.bright]
 black = "#4C566A"
 blue = "#5e81ac"

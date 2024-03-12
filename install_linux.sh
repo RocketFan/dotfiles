@@ -68,10 +68,11 @@ EOF
 # Some usefull apps #
 #####################
 
-sudo apt install -y nitrogen arandr
+sudo apt install -y nitrogen arandr bat
 
 # nitrogen - wallpapers
 # arandr - manage multiple screens
+# bat - cat with syntax highlighting
 
 #############
 # Alacritty #
@@ -82,6 +83,14 @@ sudo apt install alacritty
 
 # Set polish keyboard layout
 setxkbmap -layout pl
+
+#######
+# ZSH #
+#######
+
+sudo apt install zsh -y
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 
 ##############
 # Mini Conda #

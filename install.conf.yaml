@@ -8,5 +8,7 @@
         ~/.config/alacritty:
         ~/.config/fontconfig:
         ~/.images:
+        ~/.zshrc:
+         force: true
 
 - shell: []
