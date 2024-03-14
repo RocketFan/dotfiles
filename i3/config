@@ -199,11 +199,8 @@ bar {
 # Restore last session wallpaper with nitrogen
 exec --no-startup-id nitrogen --restore
 
-# # Enable opacity background for windows
+# Enable opacity background for windows
 exec --no-startup-id picom
-
-# Start compton
-# exec --no-startup-id compton
 
 # Setup keyboard 
 exec setxkbmap -layout pl -option caps:escape
