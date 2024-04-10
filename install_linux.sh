@@ -106,12 +106,14 @@ EOF
 sudo apt install -y nitrogen \
         arandr \
         pavucontrol \
-        bat
+        bat \
+		htop
 
 # nitrogen - wallpapers
 # arandr - manage multiple screens
 # pavucontrol - sound control
 # bat - cat with syntax highlighting
+# htop - view running processes
 
 # Install Docker
 $BASEDIR/install/docker.sh

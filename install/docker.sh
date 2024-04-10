@@ -21,6 +21,18 @@ sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plug
 is_docker_group_exists=$(getent group docker)
 if [[ ! $is_docker_group_exists ]]; then
   sudo groupadd docker
+  sudo usermod -aG docker $USER
+  newgrp docker
 fi
-sudo usermod -aG docker $USER
-newgrp docker
+
+echo "NVIDIA"
+# Nvidia container toolkit for GPU support
+curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey | sudo gpg --dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg \
+  && curl -s -L https://nvidia.github.io/libnvidia-container/stable/deb/nvidia-container-toolkit.list | \
+    sed 's#deb https://#deb [signed-by=/usr/share/keyrings/nvidia-container-toolkit-keyring.gpg] https://#g' | \
+    sudo tee /etc/apt/sources.list.d/nvidia-container-toolkit.list
+sudo apt-get update
+sudo apt-get install -y nvidia-container-toolkit
+
+# Restart docker to apply changes
+sudo systemctl restart docker
