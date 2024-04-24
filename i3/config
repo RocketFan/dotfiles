@@ -211,3 +211,6 @@ exec ~/.screenlayout/default.sh
 # For slow load of firefox
 exec dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS DISPLAY XAUTHORITY &
 exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+
+exec safeeyes
+exec syncthing

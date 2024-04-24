@@ -15,3 +15,7 @@ sudo curl -o /usr/share/keyrings/syncthing-archive-keyring.gpg https://syncthing
 echo "deb [signed-by=/usr/share/keyrings/syncthing-archive-keyring.gpg] https://apt.syncthing.net/ syncthing stable" | sudo tee /etc/apt/sources.list.d/syncthing.list
 sudo apt update
 sudo apt install syncthing -y
+
+sudo add-apt-repository ppa:slgobinath/safeeyes -y
+sudo apt update
+sudo apt install safeeyes
