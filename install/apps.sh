@@ -18,4 +18,4 @@ sudo apt install syncthing -y
 
 sudo add-apt-repository ppa:slgobinath/safeeyes -y
 sudo apt update
-sudo apt install safeeyes
+sudo apt install -y safeeyes
